@@ -1,7 +1,10 @@
 *{
     border: 0;
     padding:0;
-    background-color: rgba(237, 210, 99, 1);
+    
+}
+body{
+    background-color: whitesmoke;
 }
 .main-body{
     margin-top: 100px;
@@ -15,20 +18,19 @@
     margin-left: 20px;
 }
 .nav-style-img{
-    height: 70px;
+    height: 55px;
     width: 80px;
 }
 .navbar-custom{
     position: relative;
-    left: 700px;
-    margin-top: 10px;
+    left: 650px;
 }
 .search-button{
     width: 500px;
     position: absolute;
     width: 570px;
     height: 50px;
-    left: 435px;
+    left: 405px;
     top: 133px;
 }
 .button-style{
@@ -39,4 +41,56 @@
     font-size: 20px;
     background-color: rgba(59, 45, 100, 1);
     color: white;
+}
+#set-menu{
+    margin-top:300px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2em;
+}
+.food-item{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.food-name{
+    border-radius: 0px 0px 10px 10px;
+    background-color: whitesmoke;
+    background-color: rgba(237, 210, 99, 1);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.food-image{
+    border-radius: 10px 10px 0px 0px;
+    background-color: rgba(237, 210, 99, 1);
+    width: 270px;
+    height: 226px;
+}
+.error-msg{
+    text-align: center;
+}
+.ingredient{
+    background-color: whitesmoke;
+    display: none;
+    border: solid 2px rgba(237, 210, 99, 1);
+    border-radius: 10px;
+}
+.ingredient h3{
+    margin-top: 10px;
+}
+.ingre-style{
+    background-color: whitesmoke;
+    margin-left: 10px;
+}
+
+@media (max-width: 992px){
+    .search-button{
+        position: absolute;
+        left: 215px;
+    }
 }
