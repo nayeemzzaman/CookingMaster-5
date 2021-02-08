@@ -1,3 +1,5 @@
+
+
 const searchButton = () => {
     removePreviousDiv();
     const input = document.getElementById('search-input');
@@ -31,11 +33,12 @@ const displayMeal = meal => {
             secondDiv.setAttribute('onclick', `showDetails('${element.strMeal}')`);
             const inside = `
             <img class='food-image' src="${element.strMealThumb}" alt="">
-            <h2 class='food-name'>${element.strMeal}</h2>
+            <h5 class='food-name'>${element.strMeal}</h5>
             `;            
             secondDiv.innerHTML = inside;
             const thirdDiv=document.createElement('div');
             thirdDiv.className="ingredient";
+            thirdDiv.style.display='none';
             thirdDiv.id=element.strMeal;
             thirdDiv.innerHTML=`
             <h3 class="ingre-style">Ingredients</h3>
@@ -75,10 +78,19 @@ const showError = () => {
 
 
 const showDetails = foodName => {
+    
+    const foodDiv=document.getElementById(foodName);
+    
     const allItem=document.getElementsByClassName('ingredient');
     for(let i=0;i<allItem.length;i++){
+        const id=allItem[i].getAttribute('id')
+        if(id!==foodName)
         allItem[i].style.display='none';
     }
-    const foodDiv=document.getElementById(foodName);
-    foodDiv.style.display='block';
+    if(foodDiv.style.display==="none"){
+        foodDiv.style.display="block";
+    }
+    else{
+        foodDiv.style.display="none";
+    }
 }

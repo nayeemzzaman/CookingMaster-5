@@ -25,13 +25,13 @@ body{
     position: relative;
     left: 650px;
 }
+
 .search-button{
-    width: 500px;
-    position: absolute;
+    justify-content: center;
     width: 570px;
     height: 50px;
-    left: 405px;
-    top: 133px;
+    margin-left: 25%;
+    padding-top: 65px;
 }
 .button-style{
     height: 50px;
@@ -43,7 +43,7 @@ body{
     color: white;
 }
 #set-menu{
-    margin-top:300px;
+    margin-top:200px;
     margin-left: 100px;
     margin-right: 100px;
     display: grid;
@@ -51,6 +51,7 @@ body{
     grid-gap: 2em;
 }
 .food-item{
+    width: 270px;
     background-color: whitesmoke;
     border-radius: 10px;
     cursor: pointer;
@@ -75,6 +76,7 @@ body{
     text-align: center;
 }
 .ingredient{
+    width: 270px;
     background-color: whitesmoke;
     display: none;
     border: solid 2px rgba(237, 210, 99, 1);
@@ -89,8 +91,72 @@ body{
 }
 
 @media (max-width: 992px){
+    .nav-style{
+        height: 45px; 
+        margin-left: 30px;
+    }
+    .navbar-custom{
+        position: relative;
+        left: 5px;
+    }
     .search-button{
-        position: absolute;
-        left: 215px;
+        justify-content: center;
+        width: 570px;
+        height: 50px;
+        margin-left: 20%;
+        padding-top: 65px;
+    }
+    #set-menu{
+        justify-content: center;
+        margin-top:200px;
+        margin-left: 100px;
+        margin-right: 100px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1em;
+    }
+}
+@media (max-width: 768px){
+    #set-menu{
+        justify-content: center;
+        margin-top:200px;
+        margin-left: 100px;
+        margin-right: 100px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1em;
+    }
+    .search-button{
+        justify-content: center;
+        width: 550px;
+        height: 50px;
+        margin-left: 11%;
+        padding-top: 65px;
+    }
+}
+@media (max-width: 600px){
+    .nav-style{
+        height: 45px; 
+        margin-left: 5px;
+    }
+    .navbar-custom{
+        position: relative;
+        left: 5px;
+    }
+    #set-menu{
+        justify-content: center;
+        margin-top:200px;
+        margin-left: 100px;
+        margin-right: 100px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1em;
+    }
+    .search-button{
+        justify-content: center;
+        width: 400px;
+        height: 50px;
+        margin-left: 7%;
+        padding-top: 65px;
     }
 }
